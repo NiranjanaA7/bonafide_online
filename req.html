@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bonafide Request Form</title>
+    <style>
+        body {
+            background-color: #281528;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 50px;
+            width: 500px;
+            background-color: #5E4D4D;
+        }
+
+        h1 {
+            color: white;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .form-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-field label {
+            color: white;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-field input,
+        .input-field textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            background-color: #281528;
+            border: 1px solid white;
+        }
+
+        .submit-button {
+            background-color: #F2BABA;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-end; /* Aligns the submit button to the right */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bonafide Requesting Form</h1>
+        <div class="form-container">
+            <div class="input-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="input-field">
+                <label for="dno">D.No.</label>
+                <input type="text" id="dno" name="dno">
+            </div>
+            <div class="input-field">
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department">
+            </div>
+            <div class="input-field">
+                <label for="academic-year">Academic Year</label>
+                <input type="text" id="academic-year" name="academic-year">
+            </div>
+            <div class="input-field">
+                <label for="reason">Reason</label>
+                <textarea id="reason" name="reason" rows="4"></textarea>
+            </div>
+            <button class="submit-button">Submit</button>
+        </div>
+    </div>
+</body>
+</html>

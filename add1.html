@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            background-color: #281528;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+        }
+
+        .container {
+            padding: 50px;
+            background-color: #5E4D4D;
+        }
+
+        h1 {
+            color: white;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .dashboard-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-links a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #281528;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .dashboard-content {
+            color: white;
+        }
+
+        .user-request {
+            margin-bottom: 20px;
+        }
+
+        .user-name {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .user-name::after {
+            content: '\25BE';
+            margin-left: 5px;
+        }
+
+        .request-details {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .approve-button,
+        .deny-button {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .approve-button {
+            background-color: #A0F599;
+        }
+
+        .deny-button {
+            background-color: #FF5B5B;
+        }
+
+        .payment-list {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .payment-list-header {
+            color: white;
+            font-weight: bold;
+        }
+
+        .user-payment {
+            margin-top: 10px;
+        }
+
+        .user-payment-name {
+            color: white;
+        }
+
+        .success-button {
+            background-color: #96CAF9;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div class="dashboard-links">
+            <a href="#" id="requests-link">No. of Requests</a>
+            <a href="#" id="payments-link">List of Successful Payments</a>
+        </div>
+        <div class="dashboard-content">
+            <div class="user-request">
+                <div class="user-name">
+                    User 1
+                </div>
+                <div class="request-details">
+                    Request Form Submitted by User 1
+                    <div>
+                        <button class="approve-button">Approve</button>
+                        <button class="deny-button">Deny</button>
+                    </div>
+                </div>
+            </div>
+            <div class="user-request">
+                <div class="user-name">
+                    User 2
+                </div>
+                <div class="request-details">
+                    Request Form Submitted by User 2
+                    <div>
+                        <button class="approve-button">Approve</button>
+                        <button class="deny-button">Deny</button>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-list" id="payment-list">
+                <h2 class="payment-list-header">List of Successful Payments</h2>
+                <div class="user-payment">
+                    <div class="user-payment-name">User 1</div>
+                </div>
+                <div class="user-payment">
+                    <div class="user-payment-name">User 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const requestsLink = document.getElementById('requests-link');
+        const paymentsLink = document.getElementById('payments-link');
+        const paymentList = document.getElementById('payment-list');
+
+        requestsLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            paymentList.style.display = 'none';
+        });
+

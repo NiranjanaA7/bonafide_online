@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body {
+            background-color: #281528;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 50px;
+            width: 500px;
+            background-color: #5E4D4D;
+        }
+
+        h1 {
+            color: white;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .form-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-field label {
+            color: white;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            background-color: #281528;
+            border: 1px solid white;
+        }
+
+        .submit-button {
+            background-color: #F2BABA;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-end; /* Aligns the submit button to the right */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Login</h1>
+        <div class="form-container">
+            <div class="input-field">
+                <label for="admin">Admin</label>
+                <input type="text" id="admin" name="admin">
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <a href="alr.html" class="submit-button">Login</a>
+        </div>
+    </div>
+</body>
+</html>
